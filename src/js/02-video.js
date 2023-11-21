@@ -8,8 +8,8 @@ const currentTime = Number(localStorage.getItem(KEY_STORAGE));
 
 player.on('timeupdate', throttle(playTime, 1000));
 
-function playTime(event) {
-  localStorage.setItem(KEY_STORAGE, event.seconds);
+function playTime(evt) {
+  localStorage.setItem(KEY_STORAGE, evt.seconds);
 }
 
 player.setCurrentTime(currentTime);
